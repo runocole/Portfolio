@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Portfolio Website - Naomi Cole
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React and Tailwind CSS. This portfolio features smooth animations, a horizontal project carousel, and a beautiful baby pink and white color palette on a black background.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design that works on all device sizes
+- Beautiful animations using Framer Motion
+- Interactive UI elements with hover effects
+- Project carousel with horizontal swipe functionality
+- Contact form with validation
+- Dark theme with baby pink accents
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Make sure you have Node.js and npm installed on your machine.
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```
+   git clone <your-repo-url>
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
+   ```
+   cd portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Open your browser and navigate to `http://localhost:3000`
 
-### `npm run eject`
+## Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Personal Information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To personalize this portfolio:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Replace the placeholder text in each component with your own information.
+2. Update the links to your social media profiles and projects.
+3. Replace the placeholder image (`src/assets/placeholder-profile.jpg`) with your own photo.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Styling
 
-## Learn More
+The portfolio uses Tailwind CSS for styling. You can customize colors and styles in:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `tailwind.config.js` - For theme settings like colors and fonts
+- `src/index.css` - For global styles and custom CSS classes
+- `src/App.css` - For additional custom animations and effects
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Projects
 
-### Code Splitting
+Update the projects in the `Projects.js` component by modifying the `projects` array with your own project information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
+This portfolio can be deployed to platforms like GitHub Pages, Netlify, or Vercel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Deploy to Netlify
 
-### Making a Progressive Web App
+1. Create an account on [Netlify](https://www.netlify.com/).
+2. Push your project to a GitHub repository.
+3. In Netlify, click "New site from Git" and select your repository.
+4. Use the following build settings:
+   - Build command: `npm run build`
+   - Publish directory: `build`
+5. Click "Deploy site" and wait for the deployment to finish.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Deploy to GitHub Pages
 
-### Advanced Configuration
+1. Add the GitHub Pages dependency:
+   ```
+   npm install --save gh-pages
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Add the following scripts to your `package.json` file:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
+   ```
 
-### Deployment
+3. Add a homepage property to your `package.json` file:
+   ```json
+   "homepage": "https://yourusername.github.io/repository-name"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Deploy the site:
+   ```
+   npm run deploy
+   ```
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Slick](https://react-slick.neostack.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)

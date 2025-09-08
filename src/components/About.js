@@ -47,8 +47,8 @@ const About = () => {
   
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `${process.env.PUBLIC_URL}/naomi-cv.docx`;
-    link.download = 'naomi-cv.docx';
+    link.href = `${process.env.PUBLIC_URL}/naomi-cv.pdf`;
+    link.download = 'naomi-cv.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -1,113 +1,58 @@
-# Portfolio Website - Naomi Cole
+# 🌐 Cole Naomi Oritsemeyiwa – Portfolio  
 
-A modern, responsive portfolio website built with React and Tailwind CSS. This portfolio features smooth animations, a horizontal project carousel, and a beautiful baby pink and white color palette on a black background.
+Hi 👋, I’m **Naomi Cole** — a **Backend & AI/ML Engineer** passionate about building scalable backend systems, intelligent applications, and full-stack solutions.  
 
-## Features
+This repository hosts my **portfolio site**, where you can explore my work, projects, and skills.  
 
-- Responsive design that works on all device sizes
-- Beautiful animations using Framer Motion
-- Interactive UI elements with hover effects
-- Project carousel with horizontal swipe functionality
-- Contact form with validation
-- Dark theme with baby pink accents
+🔗 **Live Portfolio:** [runocole.netlify.app](https://runocole.netlify.app)  
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 What I Do  
+* **Backend Engineering** → Django, DRF, Node.js, PostgreSQL  
+* **AI & Machine Learning** → Scikit-learn, TensorFlow, PyTorch  
+* **Full-Stack Development** → React, REST APIs, authentication, microservices  
+* **Cloud & Deployment** → AWS, Docker, CI/CD, Netlify, Vercel  
+* **System Design** → Clean architecture, modular code, performance optimization  
 
-Make sure you have Node.js and npm installed on your machine.
+---
 
-### Installation
+## 🛠️ Tech Stack  
+**Languages:** Python, JavaScript, SQL  
+**Backend:** Django, DRF, Node.js, Express.js  
+**Databases:** PostgreSQL, MongoDB, MySQL  
+**Frontend:** React, Material UI  
+**ML/AI:** TensorFlow, Scikit-learn, PyTorch  
+**DevOps:** Docker, AWS, CI/CD, Redis, Celery  
+**Other Tools:** Git, GitHub, Postman  
 
-1. Clone the repository:
-   ```
-   git clone <your-repo-url>
-   ```
+---
 
-2. Navigate to the project directory:
-   ```
-   cd portfolio
-   ```
+## 💼 Featured Projects  
 
-3. Install dependencies:
-   ```
-   npm install
-   ```
+### 🔹 AI-Powered BI Platform (AI-BI)  
+*Python, FastAPI, PostgreSQL, ML*  
+- Dashboards, predictive analytics (XGBoost, Prophet), conversational AI chatbot.  
+- Deployed on AWS with Docker + CI/CD.  
 
-4. Start the development server:
-   ```
-   npm start
-   ```
+### 🔹 Smart Queue System (EasyPass)  
+*Django, React, PostgreSQL, WebSockets*  
+- Real-time queue tracking, QR verification, and admin dashboard.  
+- 🔗 [Live](https://easypass-frontend.vercel.app/) | [GitHub Backend](https://github.com/runocole/EasyPass-Backend)  
 
-5. Open your browser and navigate to `http://localhost:3000`
+### 🔹 TaskMate  
+- Task management PWA with push notifications.  
 
-## Customization
+### 🔹 Sports Scouting Platform  
+- Role-based scouting reports & dashboards.  
 
-### Personal Information
+---
 
-To personalize this portfolio:
+## 📬 Contact Me  
+* 📧 Email: **runocole@gmail.com**  
+* 💼 LinkedIn: [linkedin.com/in/runocole](https://linkedin.com/in/runocole)  
+* 🐙 GitHub: [github.com/runocole](https://github.com/runocole)  
 
-1. Replace the placeholder text in each component with your own information.
-2. Update the links to your social media profiles and projects.
-3. Replace the placeholder image (`src/assets/placeholder-profile.jpg`) with your own photo.
+---
 
-### Styling
-
-The portfolio uses Tailwind CSS for styling. You can customize colors and styles in:
-
-- `tailwind.config.js` - For theme settings like colors and fonts
-- `src/index.css` - For global styles and custom CSS classes
-- `src/App.css` - For additional custom animations and effects
-
-### Projects
-
-Update the projects in the `Projects.js` component by modifying the `projects` array with your own project information.
-
-## Deployment
-
-This portfolio can be deployed to platforms like GitHub Pages, Netlify, or Vercel.
-
-### Deploy to Netlify
-
-1. Create an account on [Netlify](https://www.netlify.com/).
-2. Push your project to a GitHub repository.
-3. In Netlify, click "New site from Git" and select your repository.
-4. Use the following build settings:
-   - Build command: `npm run build`
-   - Publish directory: `build`
-5. Click "Deploy site" and wait for the deployment to finish.
-
-### Deploy to GitHub Pages
-
-1. Add the GitHub Pages dependency:
-   ```
-   npm install --save gh-pages
-   ```
-
-2. Add the following scripts to your `package.json` file:
-   ```json
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
-   ```
-
-3. Add a homepage property to your `package.json` file:
-   ```json
-   "homepage": "https://yourusername.github.io/repository-name"
-   ```
-
-4. Deploy the site:
-   ```
-   npm run deploy
-   ```
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Slick](https://react-slick.neostack.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+⭐️ Feel free to fork, star ⭐, or reach out if you’d like to collaborate!  

@@ -1,4 +1,4 @@
-# 🌐 Cole Naomi Oritsemeyiwa – Portfolio  
+# 👩🏽‍💻Cole Naomi Oritsemeyiwa – Portfolio  
 
 Hi 👋, I’m **Naomi Cole** — a **Backend & AI/ML Engineer** passionate about building scalable backend systems, intelligent applications, and full-stack solutions.  
 
@@ -8,7 +8,7 @@ This repository hosts my **portfolio site**, where you can explore my work, proj
 
 ---
 
-## 🚀 What I Do  
+## What I Do  
 * **Backend Engineering** → Django, DRF, Node.js, PostgreSQL  
 * **AI & Machine Learning** → Scikit-learn, TensorFlow, PyTorch  
 * **Full-Stack Development** → React, REST APIs, authentication, microservices  
@@ -17,7 +17,7 @@ This repository hosts my **portfolio site**, where you can explore my work, proj
 
 ---
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 **Languages:** Python, JavaScript, SQL  
 **Backend:** Django, DRF, Node.js, Express.js  
 **Databases:** PostgreSQL, MongoDB, MySQL  
@@ -28,7 +28,7 @@ This repository hosts my **portfolio site**, where you can explore my work, proj
 
 ---
 
-## 💼 Featured Projects  
+## Featured Projects  
 
 ### 🔹 AI-Powered BI Platform (AI-BI)  
 *Python, FastAPI, PostgreSQL, ML*  

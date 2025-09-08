@@ -41,7 +41,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const phrases = ['Full Stack Web Developer'];
+  const phrases = ['Backend Engineer', 'AI/ML Developer', 'Python & Node.js Specialist'];
   
   useEffect(() => {
     const handleTyping = () => {
@@ -155,7 +155,7 @@ const Hero = () => {
                   lineHeight: 1.7
                 }}
               >
-                I'm a full stack web developer specializing in creating beautiful, responsive, and user-friendly applications. With knowledge in both frontend and backend technologies, I strive to deliver seamless digital experiences.
+               I'm a Backend & AI/ML Engineer passionate about building scalable applications, data-driven solutions, and robust backend systems. I specialize in Python, Django, Node.js, and PostgreSQL, and I enjoy deploying applications to the cloud using Docker and AWS.
               </Typography>
               <Box sx={{ mt: 4, display: 'flex', flexWrap: 'wrap' }}>
                 <StyledButton

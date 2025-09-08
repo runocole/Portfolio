@@ -12,7 +12,7 @@ const Projects = () => {
     {
       id: 1,
       title: "TaskMate",
-      description: "A task management app with PWA features, allowing users to create, organize, and track their tasks with reminders and progress statistics.",
+      description: "A task management PWA app allowing users to create, organize, and track tasks with reminders and statistics.",
       image: '/images/taskmate-dashboard.png',
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
       githubLink: "#",
@@ -21,30 +21,48 @@ const Projects = () => {
     {
       id: 2,
       title: "EasyPass",
-      description: "A queue management system designed for exam halls, streamlining the process of managing student flow and reducing wait times.",
+      description: "Queue & seat management system for exam halls, with real-time seat tracking and QR check-ins.",
       image: '/images/easypass-qr.png',
       technologies: ["React", "Django", "PostgreSQL", "Redux"],
-      githubLink: "#",
+      githubLink: "https://github.com/runocole/easypass",
       liveLink: "#"
     },
     {
       id: 3,
-      title: "Sports Scouting Platform",
-      description: "A platform for analyzing football players with role-based access, providing detailed statistics and performance metrics for scouts.",
-      image: "/images/scouter.png",
-      technologies: ["React", "Node.js", "D3.js", "MongoDB"],
+      title: "AI Business Intelligence Platform",
+      description: "Conversational AI chatbot with dashboards, predictive analytics, and KPIs for business insights.",
+      image: "/images/ai-platform.png",
+      technologies: ["Python", "FastAPI", "Scikit-learn", "PostgreSQL"],
       githubLink: "#",
       liveLink: "#"
     },
     {
       id: 4,
       title: "Portfolio Website",
-      description: "A custom-designed portfolio website (the one you're looking at) built with React and Tailwind CSS, featuring smooth animations and responsive design.",
-      image: "https://via.placeholder.com/800x500/111827/FFC0CB?text=Portfolio",
+      description: "My personal portfolio showcasing projects, skills, and experience, with smooth animations and responsive design.",
+      image: "/images/portfolio.png",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       githubLink: "#",
+      liveLink: "https://runocole.netlify.app"
+    },
+    {
+       id: 6,
+      title: "Sports Scouting Platform",
+      description: "Football scouting platform with dynamic reports, role-based access, and performance analytics.",
+      image: "/images/scouter.png",
+      technologies: ["React", "Node.js", "D3.js", "MongoDB"],
+      githubLink: "#",
       liveLink: "#"
-    }
+    },
+    {
+      id: 6,
+      title: "Location-Based E-Commerce",
+      description: "Geo-enabled shopping platform with personalized recommendations and smart search for users nearby.",
+      image: "/images/location-ecommerce.png",
+      technologies: ["Django", "React", "PostgreSQL", "Geolocation APIs"],
+      githubLink: "#",
+      liveLink: "#"
+    },
   ];
 
   const settings = {
@@ -57,10 +75,7 @@ const Projects = () => {
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+        settings: { slidesToShow: 1, slidesToScroll: 1 }
       }
     ]
   };
@@ -90,7 +105,7 @@ const Projects = () => {
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
         >
-          Here are some of my recent projects. Swipe to explore or use the navigation arrows.
+          Here are some of my key projects across Webapps, AI/ML, and personal portfolios.
         </motion.p>
       </div>
 
@@ -100,7 +115,6 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="project-slider"
         >
           <Slider ref={sliderRef} {...settings}>
             {projects.map(project => (
@@ -177,7 +191,7 @@ const Projects = () => {
         
         <div className="mt-8 text-center">
           <motion.a 
-            href="https://github.com" 
+            href="https://github.com/runocole" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 text-baby-pink hover:text-white transition-colors"
@@ -193,4 +207,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;

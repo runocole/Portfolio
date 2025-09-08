@@ -7,9 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 // Material UI Icons for tech stack
 import CodeIcon from '@mui/icons-material/Code';
-import JavascriptIcon from '@mui/icons-material/Javascript';
-import HtmlIcon from '@mui/icons-material/Html';
-import CssIcon from '@mui/icons-material/Css';
+import JavascriptIcon from '@mui/icons-material/Javascript';;
 import StorageIcon from '@mui/icons-material/Storage';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
@@ -56,19 +54,21 @@ const About = () => {
     document.body.removeChild(link);
   };  
   
-  const technologies = [
-    { name: 'Django', icon: <WebIcon /> },
-    { name: 'Python', icon: <PythonIcon /> },
-    { name: 'React', icon: <CodeIcon /> },
-    { name: 'Node.js', icon: <DeveloperModeIcon /> },
-    { name: 'MongoDB', icon: <StorageIcon /> },
-    { name: 'PostgreSQL', icon: <StorageIcon /> },
-    { name: 'JavaScript', icon: <JavascriptIcon /> },
-    { name: 'HTML5', icon: <HtmlIcon /> },
-    { name: 'CSS3', icon: <CssIcon /> },
-    { name: 'Material UI', icon: <AutoAwesomeIcon /> },
-    { name: 'Tailwind CSS', icon: <CssIcon /> },
-  ];
+ const technologies = [
+  { name: 'Python', icon: <PythonIcon /> },
+  { name: 'Django', icon: <WebIcon /> },
+  { name: 'FastAPI', icon: <AutoAwesomeIcon /> },
+  { name: 'Node.js', icon: <DeveloperModeIcon /> },
+  { name: 'PostgreSQL', icon: <StorageIcon /> },
+  { name: 'MongoDB', icon: <StorageIcon /> },
+  { name: 'Redis', icon: <StorageIcon /> },
+  { name: 'Docker', icon: <AutoAwesomeIcon /> },
+  { name: 'AWS', icon: <AutoAwesomeIcon /> },
+  { name: 'NumPy', icon: <CodeIcon /> },
+  { name: 'Pandas', icon: <CodeIcon /> },
+  { name: 'TensorFlow', icon: <CodeIcon /> },
+];
+
 
   return (
     <Box
@@ -108,16 +108,13 @@ const About = () => {
           {/* About Text */}
           <Grid item xs={12} md={7}>
             <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.8 }}>
-              Hello! I'm <Typography component="span" variant="h6" color="primary.main" fontFamily="Dancing Script, cursive" display="inline">Naomi Cole</Typography>, a passionate full-stack developer with a love for creating beautiful, functional web applications. With expertise in both front-end and back-end technologies, I enjoy bringing ideas to life through code.
+                  Hello! I'm <Typography component="span" variant="h6" color="primary.main" fontFamily="Dancing Script, cursive" display="inline">Cole Naomi</Typography>, a passionate <strong>Backend & AI/ML Engineer</strong> focused on building scalable web applications, intelligent data pipelines, and robust backend systems.
             </Typography>
-            
-            <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.8 }}>
-              My journey in web development started with a curiosity about how websites work, and it quickly turned into a passion for building them myself. I specialize in <Typography component="span" color="primary.main" fontStyle="italic">React, Django, Node.js, and Material UI</Typography>, creating responsive and user-friendly applications.
-            </Typography>
-            
-            <Typography variant="body1" sx={{ mb: 5, fontSize: '1.1rem', lineHeight: 1.8 }}>
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community.
-            </Typography>
+
+           <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', lineHeight: 1.8 }}>
+                   I specialize in <Typography component="span" color="primary.main" fontStyle="italic">Python, Django, Node.js, FastAPI, PostgreSQL</Typography> and have hands-on experience in deploying applications on <strong>AWS</strong> and using <strong>Docker</strong>. I also work with machine learning workflows, data preprocessing, and model deployment to create data-driven solutions.
+           </Typography>
+
 
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, mb: 3 }}>
               <Paper 
@@ -192,22 +189,49 @@ const About = () => {
                 component="h3" 
                 sx={{ mb: 3, fontFamily: 'Dancing Script, cursive', color: 'primary.main' }}
               >
-                Quick Facts
+                Profile Summary
               </Typography>
 
               <List disablePadding>
-                <StyledListItem>
-                  <StyledListItemIcon>
-                    <FiberManualRecordIcon fontSize="small" />
-                  </StyledListItemIcon>
-                  <ListItemText 
-                    primary={
-                      <Typography>
-                        <Typography component="span" fontWeight="bold">Experience:</Typography> 3+ years in web development
-                      </Typography>
-                    } 
-                  />
-                </StyledListItem>
+                 <StyledListItem>
+  <StyledListItemIcon>
+    <FiberManualRecordIcon fontSize="small" />
+  </StyledListItemIcon>
+  <ListItemText 
+    primary={
+      <Typography>
+        <Typography component="span" fontWeight="bold">Experience:</Typography> 3+ years in backend & AI/ML development
+      </Typography>
+    } 
+  />
+</StyledListItem>
+
+<StyledListItem>
+  <StyledListItemIcon>
+    <FiberManualRecordIcon fontSize="small" />
+  </StyledListItemIcon>
+  <ListItemText 
+    primary={
+      <Typography>
+        <Typography component="span" fontWeight="bold">Technical Stack:</Typography> Python, Django, Node.js, FastAPI, PostgreSQL
+      </Typography>
+    } 
+  />
+</StyledListItem>
+
+<StyledListItem>
+  <StyledListItemIcon>
+    <FiberManualRecordIcon fontSize="small" />
+  </StyledListItemIcon>
+  <ListItemText 
+    primary={
+      <Typography>
+        <Typography component="span" fontWeight="bold">AI/ML:</Typography> Pandas, NumPy, Scikit-learn, TensorFlow
+      </Typography>
+    } 
+  />
+</StyledListItem>
+
                 
                 <StyledListItem>
                   <StyledListItemIcon>
@@ -235,31 +259,6 @@ const About = () => {
                   />
                 </StyledListItem>
                 
-                <StyledListItem>
-                  <StyledListItemIcon>
-                    <FiberManualRecordIcon fontSize="small" />
-                  </StyledListItemIcon>
-                  <ListItemText 
-                    primary={
-                      <Typography>
-                        <Typography component="span" fontWeight="bold">Languages:</Typography> English (Fluent)
-                      </Typography>
-                    } 
-                  />
-                </StyledListItem>
-                
-                <StyledListItem>
-                  <StyledListItemIcon>
-                    <FiberManualRecordIcon fontSize="small" />
-                  </StyledListItemIcon>
-                  <ListItemText 
-                    primary={
-                      <Typography>
-                        <Typography component="span" fontWeight="bold">Interests:</Typography> Music, Movies, Traveling, Coding
-                      </Typography>
-                    } 
-                  />
-                </StyledListItem>
               </List>
 
               <Button
@@ -355,8 +354,9 @@ const About = () => {
             My Development Philosophy
           </Typography>
           <Typography variant="body1" sx={{ mb: 2 }}>
-            I believe in writing clean, maintainable code that solves real problems. My approach combines:
-          </Typography>
+              I focus on writing clean, maintainable backend code, building scalable APIs, and integrating AI/ML models into real-world applications.
+           </Typography>
+
           <Box component="ul" sx={{ pl: 2, mb: 0 }}>
             <Box component="li" sx={{ mb: 1, display: 'flex', alignItems: 'center' }}>
               <Box 

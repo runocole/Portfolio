@@ -1,51 +1,57 @@
 import React from 'react';
 import { Container, Typography, Grid, Box, Paper } from '@mui/material';
-import CodeIcon from '@mui/icons-material/Code';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import StorageIcon from '@mui/icons-material/Storage';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import CodeIcon from '@mui/icons-material/Code';
+import CloudIcon from '@mui/icons-material/Cloud';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 const WhatIDo = () => {
   const services = [
     {
-      title: 'Frontend Development',
-      description: 'I build sleek, responsive, and user-friendly interfaces using React.js, Tailwind CSS, and Material UI. I love making designs come alive in the browser.',
-      icon: <DesignServicesIcon fontSize="large" />
-    },
-    {
       title: 'Backend Development',
-      description: 'I create robust backend systems using Django, Node.js, and PostgreSQL. From REST APIs to authentication, I enjoy handling the logic that powers web apps.',
-      icon: <StorageIcon fontSize="large" />
+      description:
+        'I build and optimize backend systems using Django, Node.js, and PostgreSQL. From authentication to REST APIs and scalable data models, I focus on performance and security.',
+      icon: <StorageIcon fontSize="inherit" />,
     },
     {
-      title: 'Full-Stack Projects',
-      description: 'I develop full-fledged web applications from scratch — from the database to the UI. Projects like TaskMate, EasyPass, and the Scouting Platform show how I connect all the dots.',
-      icon: <IntegrationInstructionsIcon fontSize="large" />
+      title: 'AI & Machine Learning',
+      description:
+        'I design and deploy ML models with Scikit-learn, TensorFlow, and PyTorch. From predictive analytics to chatbots, I integrate AI into real-world applications and deploy them to the cloud.',
+      icon: <AutoAwesomeIcon fontSize="inherit" />,
     },
     {
-      title: 'Code & System Design',
-      description: 'I love structuring projects the right way. I focus on clean code, reusable components, version control with Git, and deployment pipelines with Netlify and Vercel.',
-      icon: <CodeIcon fontSize="large" />
-    }
+      title: 'Full-Stack Solutions',
+      description:
+        'I deliver end-to-end applications — connecting databases, backend logic, and modern UIs. Projects like EasyPass and the Scouting Platform showcase my ability to ship production-ready systems.',
+      icon: <IntegrationInstructionsIcon fontSize="inherit" />,
+    },
+    {
+      title: 'Cloud & Deployment',
+      description:
+        'I manage deployment pipelines with Git, Docker, CI/CD, Netlify, Vercel, and AWS. I ensure applications are reliable, scalable, and production-ready.',
+      icon: <CloudIcon fontSize="inherit" />,
+    },
+    {
+      title: 'Software Engineering & System Design',
+      description:
+        'I focus on writing clean, modular, and testable code. I apply system design best practices and reusable components to ensure long-term maintainability.',
+      icon: <CodeIcon fontSize="inherit" />,
+    },
   ];
 
   return (
-    <Box
-      sx={{
-        py: 10,
-        backgroundColor: 'background.default',
-        position: 'relative',
-      }}
-    >
+    <Box sx={{ py: 10, backgroundColor: 'background.default' }}>
       <Container maxWidth="lg">
+        {/* Section Heading */}
         <Typography
-          variant="h2"
-          component="h2"
+          variant="h3"
           sx={{
             mb: 6,
             textAlign: 'left',
+            fontWeight: 700,
             color: 'primary.main',
-            fontWeight: 'bold',
+            letterSpacing: 1.2,
             position: 'relative',
             paddingLeft: '15px',
             '&::before': {
@@ -56,12 +62,13 @@ const WhatIDo = () => {
               height: '70%',
               width: '5px',
               backgroundColor: 'primary.main',
-            }
+            },
           }}
         >
           What I Do
         </Typography>
 
+        {/* Service Cards */}
         <Grid container spacing={4}>
           {services.map((service, index) => (
             <Grid item xs={12} md={6} key={index}>
@@ -70,42 +77,41 @@ const WhatIDo = () => {
                 sx={{
                   p: 4,
                   height: '100%',
-                  backgroundColor: 'rgba(30, 30, 30, 0.5)',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
+                  borderRadius: 3,
+                  backgroundColor: 'rgba(30,30,30,0.5)',
+                  border: '1px solid rgba(255,255,255,0.05)',
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    transform: 'translateY(-5px)',
-                    boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
-                  }
+                    transform: 'translateY(-6px)',
+                    boxShadow: '0 12px 32px rgba(0,0,0,0.15)',
+                  },
                 }}
               >
-                <Box sx={{ display: 'flex', mb: 2 }}>
-                  <Box sx={{ 
-                    color: 'primary.main', 
-                    mr: 2,
-                    width: '50px',
-                    height: '50px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '50%',
-                    backgroundColor: 'rgba(255,192,203,0.1)'
-                  }}>
-                    {service.icon}
-                  </Box>
-                  <Typography 
-                    variant="h5" 
-                    component="h3"
-                    sx={{ 
-                      fontWeight: 600,
+                {/* Icon + Title */}
+                <Box display="flex" alignItems="center" mb={2}>
+                  <Box
+                    sx={{
+                      width: 60,
+                      height: 60,
                       display: 'flex',
-                      alignItems: 'center'
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      borderRadius: '50%',
+                      fontSize: 30,
+                      background: 'linear-gradient(135deg, #7b2ff7, #f107a3)',
+                      color: 'white',
+                      mr: 2,
                     }}
                   >
+                    {service.icon}
+                  </Box>
+                  <Typography variant="h5" sx={{ fontWeight: 600 }}>
                     {service.title}
                   </Typography>
                 </Box>
-                <Typography variant="body1" color="text.secondary">
+
+                {/* Description */}
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
                   {service.description}
                 </Typography>
               </Paper>
@@ -117,4 +123,4 @@ const WhatIDo = () => {
   );
 };
 
-export default WhatIDo; 
+export default WhatIDo;

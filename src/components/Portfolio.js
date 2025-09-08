@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 import { Box, Container, Typography, Grid, Card, CardMedia, CardContent, Button, ButtonGroup } from '@mui/material';
 import { styled } from '@mui/system';
 
-// Project images (placeholders)
-const projectImages = {
-  webapps: "https://via.placeholder.com/600x400/111827/FFC0CB?text=Web+Project",
-  websites: "https://via.placeholder.com/600x400/111827/FFC0CB?text=Mobile+App",
-  design: "https://via.placeholder.com/600x400/111827/FFC0CB?text=UI+Design"
-};
-
 const FilterButton = styled(Button)(({ theme, active }) => ({
   color: active ? theme.palette.primary.main : theme.palette.text.primary,
   borderColor: active ? theme.palette.primary.main : 'rgba(255, 255, 255, 0.1)',
@@ -43,12 +36,13 @@ const Portfolio = () => {
 
   const projects = [
     {
-    id: 1,
-    title: 'Portfolio',
-    category: 'websites',
-    image: '/images/portfolio.png',
-    technologies: ['React', 'Material-UI'],
-    description: 'A custom-designed portfolio website (the one you\'re looking at) built with React and Tailwind CSS, featuring smooth animations and responsive design.',
+      id: 1,
+      title: 'Portfolio',
+      category: 'websites',
+      image: '/images/portfolio.png',
+      technologies: ['React', 'Tailwind CSS'],
+      description: 'My personal portfolio website showcasing projects, skills, and experience.',
+      link: 'https://runocole.netlify.app'
     },
     {
       id: 2,
@@ -56,23 +50,44 @@ const Portfolio = () => {
       category: 'webapps',
       image: '/images/easypass-qr.png',
       technologies: ['React', 'Django', 'PostgreSQL'],
-      description: 'Queue management system for exam halls.'
+      description: 'Full-stack queue and seat management system with real-time tracking and QR check-ins.',
+      link: 'https://easypass-frontend.vercel.app/'
     },
-    {
+     {
       id: 3,
-      title: 'Scouting Platform',
+      title: 'Location-Based E-Commerce Platform',
       category: 'webapps',
-      image:'/images/scouter.png',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      description: 'Sports analytics platform for football scouts.'
+      image: '/images/location-ecommerce.png',
+      technologies: ['Django', 'React', 'PostgreSQL', 'Geolocation APIs'],
+      description: 'Geo-enabled shopping platform with smart search and personalized recommendations.',
+      link: 'https://github.com/runocole'
     },
     {
-      id:4, 
+      id: 4,
+      title: 'AI-Powered Business Intelligence Platform',
+      category: 'ai',
+      image: '/images/ai-platform.png',
+      technologies: ['Python', 'FastAPI', 'Scikit-learn', 'PostgreSQL'],
+      description: 'Conversational AI chatbot with KPI dashboards, predictive analytics, and business insights.',
+      link: 'https://github.com/runocole'
+    },
+    {
+      id: 5,
       title: 'TaskMate',
       category: 'webapps',
       image: '/images/taskmate-dashboard.png',
       technologies: ['React', 'Node.js', 'MongoDB'],
-      description: 'A task management app with PWA features.'
+      description: 'Task management PWA with real-time collaboration and notifications.',
+      link: 'https://github.com/runocole'
+    },
+     {
+      id: 6,
+      title: 'Sports Scouting Platform',
+      category: 'webapps',
+      image:'/images/scouter.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Django REST'],
+      description: 'Platform for football scouts with dynamic report generation, PDF exports, and real-time tracking.',
+      link: 'https://github.com/runocole/PLS-scouting'
     },
   ];
 
@@ -81,14 +96,7 @@ const Portfolio = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        pt: '100px',
-        pb: 8,
-        backgroundColor: 'background.default',
-      }}
-    >
+    <Box sx={{ minHeight: '100vh', pt: '100px', pb: 8, backgroundColor: 'background.default' }}>
       <Container maxWidth="lg">
         <Typography
           variant="h2"
@@ -116,30 +124,10 @@ const Portfolio = () => {
 
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: 5 }}>
           <ButtonGroup variant="outlined" aria-label="portfolio filter">
-            <FilterButton
-              active={filter === 'all' ? 1 : 0}
-              onClick={() => setFilter('all')}
-            >
-              All
-            </FilterButton>
-            <FilterButton
-              active={filter === 'webapps' ? 1 : 0}
-              onClick={() => setFilter('webapps')}
-            >
-              Webapps
-            </FilterButton>
-            <FilterButton
-              active={filter === 'websites' ? 1 : 0}
-              onClick={() => setFilter('websites')}
-            >
-              Websites 
-            </FilterButton>
-            <FilterButton
-              active={filter === 'design' ? 1 : 0}
-              onClick={() => setFilter('design')}
-            >
-              UI/UX
-            </FilterButton>
+            <FilterButton active={filter === 'all' ? 1 : 0} onClick={() => setFilter('all')}>All</FilterButton>
+            <FilterButton active={filter === 'webapps' ? 1 : 0} onClick={() => setFilter('webapps')}>Webapps</FilterButton>
+            <FilterButton active={filter === 'websites' ? 1 : 0} onClick={() => setFilter('websites')}>Websites</FilterButton>
+            <FilterButton active={filter === 'ai' ? 1 : 0} onClick={() => setFilter('ai')}>AI/ML</FilterButton>
           </ButtonGroup>
         </Box>
 
@@ -154,33 +142,24 @@ const Portfolio = () => {
                     image={project.image}
                     alt={project.title}
                   />
-                  <Box
-                    className="overlay"
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                      backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      opacity: 0,
-                      transition: 'opacity 0.3s ease'
-                    }}
-                  >
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      sx={{
-                        textTransform: 'none',
-                        fontWeight: 600,
-                        m: 1
-                      }}
-                    >
-                      View Project
-                    </Button>
+                  <Box className="overlay" sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    opacity: 0,
+                    transition: 'opacity 0.3s ease'
+                  }}>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <Button variant="contained" color="primary" sx={{ textTransform: 'none', fontWeight: 600, m: 1 }}>
+                        View Project
+                      </Button>
+                    </a>
                   </Box>
                 </Box>
                 <CardContent sx={{ p: 3 }}>
@@ -218,4 +197,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio; 
+export default Portfolio;
